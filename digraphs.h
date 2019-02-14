@@ -2,9 +2,11 @@
 #define _DIGRAPH_H
 
 #include <stdint.h>
+#include <stdlib.h>
 
 /* Digraph count information. */
-struct digraphs {
+struct digraphs 
+{
     /* Number of alphabetic characters examined. */
     uint64_t nchars;
     /*
@@ -22,6 +24,12 @@ struct digraphs {
      * do counts[4][0]++
      */
     uint64_t counts[52][52];
+};
+
+struct result 
+{
+    char digraph[2];
+    uint64_t count;
 };
 
 /* text.c */
@@ -43,5 +51,8 @@ digraphs_text(char *filename);
  */
 extern struct digraphs *
 digraphs_fs(char *path);
+
+extern int mapping(char alpha);
+extern int compare_counts(const void *p, const void *q);
 
 #endif
