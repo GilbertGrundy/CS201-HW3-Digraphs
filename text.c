@@ -40,7 +40,5 @@ struct digraphs * digraphs_text(char * filename)
         char_pair[1] = fgetc(diagraph_file); 
     }
 
-//    qsort(file_values.counts, 2704, 8, &compare_counts);
-
     return &file_values;
 }

@@ -1,24 +1,13 @@
-#define _DEFAULT_SOURCE
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <dirent.h>
 #include "digraphs.h"
 
 int mapping(char alpha)
 {
+    //if alpha is uppercase, map to index 26 - 51
     if((alpha > 64) && (alpha < 91)) return (alpha - 39);
+    
+    //if alpha is lowercase, map to index 0 - 25
     if((alpha > 96) && (alpha < 123)) return (alpha - 97);
+
+    //otherwise, give a negative number.
     return -1;
 }
-
-int compare_counts(const void *p, const void *q)
-{
-    int x = *(const int *)p;
-    int y = *(const int *)q;
-
-    if(x < y) return 1;
-    else return -1;
-}
-
-//https://en.wikipedia.org/wiki/Qsort
