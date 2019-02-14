@@ -8,5 +8,7 @@
 
 struct digraphs * digraphs_fs(char * path)
 {
+    static struct digraphs directory_values;
 
+    return &directory_values;
 }

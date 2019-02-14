@@ -14,7 +14,7 @@ int main(int argc, char **argv)
     //a file or directory, if not exit program.
     if(argc != 3)
     {
-        fprintf(stderr, "Digraphs: invalid amount of arguments\n");
+        fprintf(stderr, "Digraphs: Invalid amount of arguments\n");
         return -1;
     }
 
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
     }//if not the wrong flag has been passed, exit program.
     else
     {
-        fprintf(stderr, "Digraphs: invalid flag\n");
+        fprintf(stderr, "Digraphs: Invalid flag\n");
         return -1;
     }
 
