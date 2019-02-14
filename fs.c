@@ -4,3 +4,9 @@
 #include <stdio.h>
 #include <dirent.h>
 #include "digraphs.h"
+
+
+struct digraphs * digraphs_fs(char * path)
+{
+
+}

@@ -18,22 +18,24 @@ int main(int argc, char **argv)
         return -1;
     }
 
+    struct digraphs * values;
+
     //to check if main has been passed the flag for
     //a textfile
     if((argv[1][0] == '-') && (argv[1][1] == 't'))
     {
-        
+         values = digraphs_text(argv[2]);
+
     }//checks if theflag for a file directory has been passed
     else if((argv[1][0] == '-') && (argv[1][1] == 'p'))
     {
-
+        values = digraphs_fs(argv[2]);
     }//if not the wrong flag has been passed, exit program.
     else
     {
         fprintf(stderr, "Digraphs: invalid flag\n");
         return -1;
     }
-
 
     return 0;
 }
