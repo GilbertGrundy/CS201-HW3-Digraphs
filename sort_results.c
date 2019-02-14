@@ -18,13 +18,15 @@ int sort_results(struct result * top, struct digraphs * values)
                 if(values->counts[i][j] > top[k].count)
                 {
                     ++success;
-                    int s = k+1;
-                    while(s < 10)
+                    int s = 9;
+
+                    while(s != k)
                     {
-                        top[s].count = top[s-1].count;
-                        top[s].digraph[0] = top[s-1].digraph[0];
-                        top[s].digraph[1] = top[s-1].digraph[1];
-                        s++;
+                        top[s].count = top[s - 1].count;
+                        top[s].digraph[0] = top[s - 1].digraph[0];
+                        top[s].digraph[1] = top[s - 1].digraph[1];
+
+                        s--;
                     }
                     top[k].count = values->counts[i][j];
                     
