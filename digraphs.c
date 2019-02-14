@@ -19,7 +19,14 @@ int main(int argc, char **argv)
     }
 
     struct digraphs * values;
+    struct result top[10];
+    result_constructor(top);
 
+//    top[0].count = 0;
+
+  //  printf("Top diagraphs: %s", top[0].digraph);
+    //printf(" %ld\n", top[0].count);
+    
     //to check if main has been passed the flag for
     //a textfile
     if((argv[1][0] == '-') && (argv[1][1] == 't'))
@@ -37,5 +44,10 @@ int main(int argc, char **argv)
         return -1;
     }
 
+    sort_results(top, values);
+
+    display(values, top);
+
     return 0;
 }
+

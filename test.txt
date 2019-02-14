@@ -1,0 +1,5 @@
+Simple text file to test the program te te te te
+aa aa aa aa aa
+ss ss ss ss
+tt tt tt tt tt
+xy xy xy xy xy xy

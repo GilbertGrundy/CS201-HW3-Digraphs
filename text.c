@@ -15,6 +15,8 @@ struct digraphs * digraphs_text(char * filename)
     int index1 = 0;
     int index2 = 0;
 
+    diagraph_constructor(&file_values);
+
     diagraph_file = fopen(filename, "r");
 
     if(!diagraph_file) 
@@ -38,7 +40,7 @@ struct digraphs * digraphs_text(char * filename)
         char_pair[1] = fgetc(diagraph_file); 
     }
 
-    qsort(file_values.counts, 2704, 8, &compare_counts);
+//    qsort(file_values.counts, 2704, 8, &compare_counts);
 
     return &file_values;
 }

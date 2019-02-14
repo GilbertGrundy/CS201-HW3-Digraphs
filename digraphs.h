@@ -54,5 +54,10 @@ digraphs_fs(char *path);
 
 extern int mapping(char alpha);
 extern int compare_counts(const void *p, const void *q);
+extern int sort_results(struct result * top, struct digraphs * values);
+extern int display(struct digraphs * values, struct result * top);
+extern int diagraph_constructor(struct digraphs * values);
+extern int result_constructor(struct result * top);
+
 
 #endif
