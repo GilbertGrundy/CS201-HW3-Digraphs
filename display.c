@@ -6,7 +6,7 @@
 
 int display(struct digraphs * values, struct result * top)
 {
-    printf("Alphabetic characters: %ld\n", values->nchars);
+    printf("\nAlphabetic characters: %ld\n", values->nchars);
     printf("Top diagraphs: \n");
     
     int success = 0;
@@ -17,6 +17,8 @@ int display(struct digraphs * values, struct result * top)
         printf("%s", top[i].digraph);
         printf(" %ld\n", top[i].count);
     }
+
+    printf("\n");
 
     return success;
 }
