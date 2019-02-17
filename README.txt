@@ -23,7 +23,10 @@ looks expensive as it is.
 I'm very happy with the error handling, I think the program
 gives you useful information with wrong argument input.
 
+                 EXAMPLE RUN's:
 
+
+* * * * * * * * * * * * * * * * * * * * * * * * * *
 
 $ ./digraphs -p ~/
 
@@ -70,3 +73,4 @@ ma 1
 ne 1
 nu 1
 
+* * * * * * * * * * * * * * * * * * * * * * * * * *
