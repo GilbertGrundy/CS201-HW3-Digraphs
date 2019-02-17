@@ -18,7 +18,7 @@ not something I've done extensively before.
 
 Still think with more time I could make a cleaner, and 
 faster implementation of the program. The result sorting
-looks expensive as it is.
+looks expensive as it stands.
 
 I'm very happy with the error handling, I think the program
 gives you useful information with wrong argument input.
@@ -74,3 +74,23 @@ ne 1
 nu 1
 
 * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+         EXAMPLE RUN's with invalid input:
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * *
+
+$ ./digraphs -p
+Digraphs: Invalid amount of arguments.
+
+$ ./digraphs
+Digraphs: Invalid amount of arguments.
+
+$ ./digraphs -t ~/
+Diagraphs: Argument is a directory. Try -p flag.
+
+$ ./digraphs -p pr.txt
+Digraphs: Argument is not a directory.
+
+* * * * * * * * * * * * * * * * * * * * * * * * * *
+
