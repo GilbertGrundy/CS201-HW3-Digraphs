@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     }
 
     struct digraphs * values = NULL;
-    struct result * top = result_constructor(10);
+    struct result * top = result_constructor(MAX);
    
     //checks if main has been passed the flag for a textfile -t
     if((argv[1][0] == '-') && (argv[1][1] == 't'))
@@ -35,13 +35,17 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    //find the top 10 most common digraphs
+    //find the top MAX(10) most common digraphs
     //and place in the result struct
     sort_results(top, values);
 
-    //display the character count, and the top 10
-    //digraphs.
-    display(values, top);
+    //display the character count, and the top MAX(10)
+    //digraphs. if nchars is 0, then no digraphs are counted
+    //so don't bother with display function
+    if(values->nchars) display(values, top);
+    else printf("\n");
+
+    //free memory, if allocated
     if(values) free(values);
     if(top) free(top);
 

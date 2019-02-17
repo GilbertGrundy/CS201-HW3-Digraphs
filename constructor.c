@@ -3,7 +3,8 @@
 #include <dirent.h>
 #include "digraphs.h"
 
-
+//constructor for struct digraphs. Memory must be freed
+//outside of function.
 struct digraphs * digraphs_constructor()
 {
     struct digraphs * create = malloc(sizeof(struct digraphs));
@@ -19,6 +20,9 @@ struct digraphs * digraphs_constructor()
     return create;
 }
 
+//constructor for struct result. Memory must be freed
+//outside of function. Always making an array of struct result
+//so taking in an int argument for size of array.
 struct result * result_constructor(int size)
 {
     struct result * create = malloc(size*sizeof(struct result));

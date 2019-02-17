@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include <dirent.h>
 
+//#ifndef MAX 10
+#define MAX 10 
+
 /* Digraph count information. */
 struct digraphs 
 {

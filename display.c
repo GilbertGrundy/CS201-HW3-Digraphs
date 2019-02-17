@@ -3,6 +3,10 @@
 #include <dirent.h>
 #include "digraphs.h"
 
+
+//Display function for the number of alphabetic characters
+//read in, and for the top MAX(10) most frequent digraphs
+//encountered. 
 int display(struct digraphs * values, struct result * top)
 {
     printf("\nAlphabetic characters: %ld\n", values->nchars);
@@ -10,7 +14,7 @@ int display(struct digraphs * values, struct result * top)
     
     int success = 0;
 
-    for(int i = 0; i < 10; ++i)
+    for(int i = 0; i < MAX; ++i)
     {
         success++;
         printf("%s", top[i].digraph);
