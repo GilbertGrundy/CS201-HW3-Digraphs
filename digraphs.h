@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <stdlib.h>
+#include <dirent.h>
 
 /* Digraph count information. */
 struct digraphs 
@@ -32,6 +33,8 @@ struct result
     uint64_t count;
 };
 
+
+
 /* text.c */
 
 /*
@@ -56,8 +59,8 @@ extern int mapping(char alpha);
 extern int compare_counts(const void *p, const void *q);
 extern int sort_results(struct result * top, struct digraphs * values);
 extern int display(struct digraphs * values, struct result * top);
-extern int diagraph_constructor(struct digraphs * values);
-extern int result_constructor(struct result * top);
-
+extern struct digraphs * digraphs_constructor();
+extern struct result * result_constructor(int size); 
+extern void recursive_fs(struct digraphs * directory_values, char * path);
 
 #endif

@@ -1,7 +1,5 @@
-//#ifndef _DEFAULT_SOURCE
-#define _DEFAULT_SOURCE
-
 #include <stdio.h>
+#include <stdlib.h>
 #include <dirent.h>
 #include "digraphs.h"
 
@@ -18,10 +16,9 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    struct digraphs * values;
-    struct result top[10];
-    result_constructor(top);
-    
+    struct digraphs * values = NULL;
+    struct result * top = result_constructor(10);
+   
     //checks if main has been passed the flag for a textfile -t
     if((argv[1][0] == '-') && (argv[1][1] == 't'))
     {
@@ -38,6 +35,8 @@ int main(int argc, char **argv)
         return -1;
     }
 
+    printf("Number of nchar: %ld\n", values->nchars);
+
     //find the top 10 most common digraphs
     //and place in the result struct
     sort_results(top, values);
@@ -45,6 +44,9 @@ int main(int argc, char **argv)
     //display the character count, and the top 10
     //digraphs.
     display(values, top);
+    if(values) free(values);
+    if(top) free(top);
+
 
     return 0;
 }
