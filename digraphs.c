@@ -35,8 +35,6 @@ int main(int argc, char **argv)
         return -1;
     }
 
-    printf("Number of nchar: %ld\n", values->nchars);
-
     //find the top 10 most common digraphs
     //and place in the result struct
     sort_results(top, values);

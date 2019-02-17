@@ -24,17 +24,18 @@ struct digraphs * digraphs_text(char * filename)
 
     while(!feof(diagraph_file))
     {
+        char_pair[0] = char_pair[1];
+        char_pair[1] = fgetc(diagraph_file); 
+        
         index1 = mapping(char_pair[0]);
         index2 = mapping(char_pair[1]);
 
-        if((index1 > 0) && (index2 > 0))
+        if(index2 > -1) file_values->nchars++;
+
+        if((index1 > -1) && (index2 > -1))
         {    
             file_values->counts[index1][index2]++;
-            file_values->nchars++;
         }
-
-        char_pair[0] = char_pair[1];
-        char_pair[1] = fgetc(diagraph_file); 
     }
 
     return file_values;
