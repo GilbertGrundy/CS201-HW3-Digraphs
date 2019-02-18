@@ -72,7 +72,7 @@ void recursive_fs(struct digraphs * directory_values, char * path)
     while(digraph_file)
     {   
         //if the address is a directory, and not one which begins with .
-        if((digraph_file->d_type & DT_DIR) && (digraph_file->d_name[0] != '.'))
+        if((digraph_file->d_type == DT_DIR) && (digraph_file->d_name[0] != '.'))
         {
             //create a char array to hold the whole address of the directory
             int size = strlen(path) + strlen(digraph_file->d_name) + 2;
