@@ -26,8 +26,11 @@ int display(struct digraphs * values, struct result * top)
     for(int i = 0; i < MAX; ++i)
     {
         success++;
-        printf("%s", top[i].digraph);
-        printf(" %ld\n", top[i].count);
+        if(top[i].count)
+        {
+            printf("%s", top[i].digraph);
+            printf(" %ld\n", top[i].count);
+        }
     }
 
     printf("\n");
