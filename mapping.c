@@ -1,3 +1,12 @@
+/* 
+ * Gilbert Grundy
+ * Digraphs Frequencies
+ * HW3
+ *
+ * File holds function to map digraphs
+ * to the correct element of 2D array.
+ *
+ */
 #include "digraphs.h"
 
 

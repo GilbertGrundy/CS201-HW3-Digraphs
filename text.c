@@ -1,3 +1,13 @@
+/* 
+ * Gilbert Grundy
+ * Digraphs Frequencies
+ * HW3
+ *
+ * File holds function
+ * which searches a file
+ * for digraphs
+ *
+ */
 #define _DEFAULT_SOURCE
 #define S_IFDIR
 #include <stdio.h>

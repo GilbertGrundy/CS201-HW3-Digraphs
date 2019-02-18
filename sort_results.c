@@ -1,3 +1,13 @@
+/* 
+ * Gilbert Grundy
+ * Digraphs Frequencies
+ * HW3
+ *
+ * File holds function to sort the
+ * frequency of digraphs in order
+ * of mmost frequent.
+ *
+ */
 #define _DEFAULT_SOURCE
 
 #include <stdio.h>

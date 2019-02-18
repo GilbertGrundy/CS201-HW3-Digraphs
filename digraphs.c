@@ -1,3 +1,11 @@
+/* 
+ * Gilbert Grundy
+ * Digraphs Frequencies
+ * HW3
+ *
+ * File holds main() for the program
+ *
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <dirent.h>

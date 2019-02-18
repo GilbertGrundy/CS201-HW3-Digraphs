@@ -1,3 +1,12 @@
+/* 
+ * Gilbert Grundy
+ * Digraphs Frequencies
+ * HW3
+ *
+ * File holds function to search a
+ * directory tree for digraphs
+ *
+ */
 #define _DEFAULT_SOURCE
 #include <stdio.h>
 #include <stdlib.h>

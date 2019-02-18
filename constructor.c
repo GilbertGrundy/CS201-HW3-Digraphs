@@ -1,3 +1,13 @@
+/* 
+ * Gilbert Grundy
+ * Digraphs Frequencies
+ * HW3
+ *
+ * File holds function to initialize
+ * both struct digraphs
+ * and struct result
+ *
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <dirent.h>

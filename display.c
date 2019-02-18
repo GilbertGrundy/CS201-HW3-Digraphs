@@ -1,3 +1,12 @@
+/* 
+ * Gilbert Grundy
+ * Digraphs Frequencies
+ * HW3
+ *
+ * File holds function to display
+ * the most frequent digraphs
+ *
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <dirent.h>
